@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css-counter-demo</title>
+	<style>
+		.choose{
+			counter-reset: fruit;
+		}
+		.choose input:checked{
+			counter-increment: fruit;
+		}
+		.count:after{
+			content: counter(fruit);
+		}
+	</style>
+</head>
+<body>
+	<div class="choose">
+		<label><input type="checkbox" name="" id="">apple</label>
+		<label><input type="checkbox" name="" id="">groop</label>
+		<label><input type="checkbox" name="" id="">tomato</label>
+		<label><input type="checkbox" name="" id="">watermalon</label>
+		<label><input type="checkbox" name="" id="">orange</label>
+		<label><input type="checkbox" name="" id="">banana</label>
+	</div>
+	<p>You have chosen<span class="count"></span>fruit</p>
+</body>
+</html>
