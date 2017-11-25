@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css-rewrite-counter</title>
+	<style>
+		.choosepart{
+			counter-reset: fruit;
+		}
+		.choosepart input:checked{
+			counter-increment: fruit;
+		}
+		.count:before{
+			content: counter(fruit);
+		}
+	</style>
+</head>
+<body>
+	<div class="choosepart">
+		<label><input type="checkbox">苹果</label>
+		<label><input type="checkbox">牛油果</label>
+		<label><input type="checkbox">水蜜桃</label>
+		<label><input type="checkbox">佛手果</label>
+		<label><input type="checkbox">橘子</label>
+	</div>
+	<p>您已经选择了<span class="count"></span>种水果</p>
+</body>
+</html>
